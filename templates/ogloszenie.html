@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+{% include 'slide.html' %}
+
+<!-- WSZYSTKO -->
+
+
+<!-- ABOUT US -->
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12" style="margin:30px;">
+						</div>
+					</div>
+				</div>
+
+				<section class="about-us custom-section-padding" id="about-us">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<h1>{{ single_oferta.title }}</h1>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">Tutaj cos</div>
+							<div class="col-md-6">Tutaj też cos</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12" style="margin:40px;">
+						</div>
+					</div>
+				</div>
+
+				<!-- KONIEC ABOUT US -->
+
+
+
+<!-- KONIEC WSZYSTKO -->
+
+
+{% endblock %}

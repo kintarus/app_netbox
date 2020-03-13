@@ -1,2 +1,2 @@
-# app_netbox
-Apka netbox ostatni
+# netbox_www
+Aplikacja web netbox

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+{% include 'slide.html' %}
+
+<!-- WSZYSTKO -->
+
+
+<!-- ABOUT US -->
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12" style="margin:30px;">
+						</div>
+					</div>
+				</div>
+
+				<section class="about-us custom-section-padding" id="about-us">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<h1>Aktualne ogłoszenia</h1>
+							</div>
+						</div>
+						{% for o in oferty_wszystkie %}
+						<div class="row">
+							<div class="col-md-12">
+								<h2>{{ o.title }}</h2><br>
+								<span style="font-size: 11px; color: #8a8a8a;">{{ o.lokalizacja }}</span>
+							</div>
+						</div>
+						<div class="row">
+
+							<div class="col-md-6"><img src="{{ o.foto }}"></div>
+							<div class="col-md-6"><p>{{ o.zajawka }}</p><hr>
+								data publikacji: <span style="font-size: 11px; color: #8a8a8a;">{{ o.published_date }}</span>
+								<hr>
+								<a href="/oferta/{{ o.id }}">Zobacz ofertę</a>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</section>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12" style="margin:40px;">
+						</div>
+					</div>
+				</div>
+
+				<!-- KONIEC ABOUT US -->
+
+
+
+<!-- KONIEC WSZYSTKO -->
+
+
+{% endblock %}
